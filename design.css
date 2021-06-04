@@ -1,0 +1,25 @@
+body {
+    margin: 0px;
+}
+.header {
+    padding: 5vw;
+    background-color: #ffb3d9;
+    color: white;
+    text-align: center;
+}
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 8vw;
+    font-weight: 200;
+}
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+}
+p {
+    padding-left: 2vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1vw;
+    font-weight: 100;
+}
