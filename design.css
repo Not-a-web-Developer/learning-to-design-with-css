@@ -1,15 +1,37 @@
 body {
     margin: 0px;
+    background: url(https://images.unsplash.com/photo-1542401886-65d6c61db217) center center;
+    background-size: 100vw auto;
 }
 @keyframes fadein {
    0% {opacity: 0;}
    100% {opacity: 1;}
 }
+
+div {
+    padding: 1.5em;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .1), 0 1px 8px rgba(0, 0, 0, .2);
+    left: 50%;
+  }
+
 .header {
+    /* Parent background + Gaussian blur */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(10px);
+
+    /* Exclusion blend */
+    background-blend-mode: exclusion;
+
+    /* Color/tint overlay + Opacity */
+    background: rgba(0, 0, 0, 0.4);
+
+    /* Tiled noise texture */
+    background-image: url(/noise.png);
+
     animation-name: fadein;
     animation-duration: 800ms;
     padding: 5vw;
-    background-color: #ffb3d9;
+    /* background-color: #ffb3d9; */
     color: white;
     text-align: center;
 }
@@ -24,6 +46,7 @@ h2 {
     font-weight: 200;
 }
 p {
+    padding-top: 1vw;
     animation-fill-mode: both;
     animation-name: fadein;
     animation-duration: 500ms;
@@ -33,4 +56,5 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
     font-weight: 100;
+    color: beige;
 }
