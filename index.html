@@ -1,12 +1,145 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="design.css">
-    </head>
-    <body>
-        <div class="header">
-            <h1>Hello World!</h1>
-            <h2>yay im acrylic</h2><br><br><br><br><br><br><br><br><br><br><br><br>
-        </div>
-        <p>this is some example text i'm using rn.</p>
-    </body>
-</html>
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8" />
+<title>css-lite demo</title>
+<link rel="stylesheet" href="design.css" />
+<link rel="stylesheet" href="highlight.css" />
+<link rel="stylesheet" href="highlight-dark.css" />
+<style>
+article {
+  max-width: 75%;
+  margin: 0 auto;
+}
+</style>
+<main>
+	<header>
+  <h1>
+    A very neato article title<br />
+    <small>Article subtitle</small>
+  </h1></header>
+  <article>
+    <p>
+    Eius et eveniet velit eos. <a href="https://example.org">Quos occaecati</a>
+    omnis voluptatem culpa rerum nostrum ex nobis. Saepe laudantium sint ex aut consequuntur.
+    </p>
+    <h2>Heading</h2>
+    <h3>Heading</h3>
+    <h4>Heading</h4>
+    <h5>Heading</h5>
+    <p>Officia exercitationem vitae labore sit. Est quisquam aut repellat debitis cumque dolores est sed. Reiciendis non expedita totam amet. Ab qui quia aut voluptatem. Atque dicta quo molestias nam fuga voluptatem distinctio.</p>
+    <blockquote>
+      <p>Officia exercitationem vitae labore sit. Est quisquam aut repellat debitis cumque dolores est sed. Reiciendis non expedita totam amet. Ab qui quia aut voluptatem. Atque dicta quo molestias nam fuga voluptatem distinctio.</p>
+      <p>Officia exercitationem vitae labore sit. Est quisquam aut repellat debitis cumque dolores est sed. Reiciendis non expedita totam amet. Ab qui quia aut voluptatem. Atque dicta quo molestias nam fuga voluptatem distinctio.</p>
+    </blockquote>
+    <p>Accusantium non nihil ut alias aspernatur excepturi. Eos voluptas qui placeat quidem ducimus esse. Magnam saepe modi dicta officiis quibusdam dolor. Facere quaerat debitis iure et et quis. Id accusamus accusantium dignissimos molestiae aliquam natus animi dolorem. Aliquid voluptatem nostrum quasi libero nobis qui.</p>
+    <figure>
+      <p><img src="lighthouse.jpg" alt="A lighthouse" /></p>
+      <figcaption>A picture of a lighthouse. Ea voluptatem dolorem dolor provident rerum. Optio inventore iste sapiente ut. Maxime nam rerum pariatur ex voluptates rerum deleniti.</figcaption>
+    </figure>
+    <p>Ea voluptatem dolorem dolor provident rerum. Optio inventore iste sapiente ut. Maxime nam rerum pariatur ex voluptates rerum deleniti.</p>
+    <p>Pariatur eveniet quo aut et qui. Autem occaecati quia suscipit quos odit animi et ipsum. Corrupti ipsum sint doloremque. Corrupti ut suscipit et.</p>
+    <aside>
+      Aside: Officia exercitationem vitae labore sit. Est quisquam aut
+      repellat debitis cumque dolores est sed. Reiciendis non expedita totam
+      amet. Ab qui quia aut voluptatem. Atque dicta quo molestias nam fuga
+      voluptatem distinctio.
+    </aside>
+    <p>Ea voluptatem dolorem dolor provident rerum. Optio inventore iste sapiente ut. Maxime nam rerum pariatur ex voluptates rerum deleniti.</p>
+    <p>Pariatur eveniet quo aut et qui. Autem occaecati quia suscipit quos odit animi et ipsum. Corrupti ipsum sint doloremque. Corrupti ut suscipit et.</p>
+<pre class="highlight"><code><span class="cp">use fmt;</span>
+<span class="cp">use io;</span>
+<span class="cp">use net::dial;</span>
+<span class="cp">use os;</span>
+<span class="cp">use strings;</span>
+
+<span class="cp">@init</span> <span class="k">fn</span> <span class="n">registersvc</span><span class="p">()</span> <span class="kt">void</span> <span class="o">=</span> <span class="n">dial</span><span class="o">::</span><span class="n">registersvc</span><span class="p">(</span><span class="s">&#34;tcp&#34;</span><span class="p">,</span> <span class="s">&#34;finger&#34;</span><span class="p">,</span> <span class="p">[],</span> <span class="mi">79</span><span class="p">);</span>
+<span class="cp">@noreturn</span> <span class="k">fn</span> <span class="n">usage</span><span class="p">()</span> <span class="kt">void</span> <span class="o">=</span> <span class="n">fmt</span><span class="o">::</span><span class="n">fatal</span><span class="p">(</span><span class="s">&#34;Usage: {} &lt;user&gt;[@&lt;host&gt;]&#34;</span><span class="p">,</span> <span class="n">os</span><span class="o">::</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+
+<span class="k">export</span> <span class="k">fn</span> <span class="n">main</span><span class="p">()</span> <span class="kt">void</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="p">(</span><span class="k">len</span><span class="p">(</span><span class="n">os</span><span class="o">::</span><span class="n">args</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">)</span> <span class="n">usage</span><span class="p">();</span>
+
+	<span class="k">const</span> <span class="n">items</span> <span class="o">=</span> <span class="n">strings</span><span class="o">::</span><span class="n">split</span><span class="p">(</span><span class="n">os</span><span class="o">::</span><span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&#34;@&#34;</span><span class="p">);</span>
+	<span class="k">defer</span> <span class="k">free</span><span class="p">(</span><span class="n">items</span><span class="p">);</span>
+	<span class="k">if</span> <span class="p">(</span><span class="k">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="n">usage</span><span class="p">();</span>
+
+	<span class="k">const</span> <span class="n">user</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+	<span class="k">const</span> <span class="n">host</span> <span class="o">=</span> <span class="k">if</span> <span class="p">(</span><span class="k">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="s">&#34;localhost&#34;</span>
+		<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="n">items</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+		<span class="k">else</span> <span class="n">usage</span><span class="p">();</span>
+
+	<span class="k">match</span> <span class="p">(</span><span class="n">execute</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">host</span><span class="p">))</span> <span class="p">{</span>
+		<span class="n">err</span><span class="o">:</span> <span class="n">dial</span><span class="o">::</span><span class="n">error</span> <span class="o">=&gt;</span> <span class="n">fmt</span><span class="o">::</span><span class="n">fatal</span><span class="p">(</span><span class="n">dial</span><span class="o">::</span><span class="n">strerror</span><span class="p">(</span><span class="n">err</span><span class="p">)),</span>
+		<span class="n">err</span><span class="o">:</span> <span class="n">io</span><span class="o">::</span><span class="n">error</span> <span class="o">=&gt;</span> <span class="n">fmt</span><span class="o">::</span><span class="n">fatal</span><span class="p">(</span><span class="n">io</span><span class="o">::</span><span class="n">strerror</span><span class="p">(</span><span class="n">err</span><span class="p">)),</span>
+		<span class="kt">void</span> <span class="o">=&gt;</span> <span class="kt">void</span><span class="p">,</span>
+	<span class="p">};</span>
+<span class="p">};</span>
+
+<span class="k">fn</span> <span class="n">execute</span><span class="p">(</span><span class="n">user</span><span class="o">:</span> <span class="kt">str</span><span class="p">,</span> <span class="n">host</span><span class="o">:</span> <span class="kt">str</span><span class="p">)</span> <span class="p">(</span><span class="kt">void</span> <span class="o">|</span> <span class="n">dial</span><span class="o">::</span><span class="n">error</span> <span class="o">|</span> <span class="n">io</span><span class="o">::</span><span class="n">error</span><span class="p">)</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="k">const</span> <span class="n">conn</span> <span class="o">=</span> <span class="n">dial</span><span class="o">::</span><span class="n">dial</span><span class="p">(</span><span class="s">&#34;tcp&#34;</span><span class="p">,</span> <span class="n">host</span><span class="p">,</span> <span class="s">&#34;finger&#34;</span><span class="p">)</span><span class="o">?</span><span class="p">;</span>
+	<span class="k">defer</span> <span class="n">io</span><span class="o">::</span><span class="n">close</span><span class="p">(</span><span class="n">conn</span><span class="p">);</span>
+	<span class="n">fmt</span><span class="o">::</span><span class="n">fprintf</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s">&#34;{}</span><span class="se">\r\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span><span class="o">?</span><span class="p">;</span>
+	<span class="n">io</span><span class="o">::</span><span class="n">copy</span><span class="p">(</span><span class="n">os</span><span class="o">::</span><span class="n">stdout</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span><span class="o">?</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre>
+    <p>Pariatur eveniet quo aut et qui. Autem occaecati quia suscipit quos odit animi et ipsum. Corrupti ipsum sint doloremque. Corrupti ut suscipit et.</p>
+    <p>Officia exercitationem vitae labore sit. Est quisquam aut repellat debitis cumque dolores est sed. Reiciendis non expedita totam amet. Ab qui quia aut voluptatem. Atque dicta quo molestias nam fuga voluptatem distinctio.</p>
+    <hr />
+    <p>Ea voluptatem dolorem dolor provident rerum. Optio inventore iste sapiente ut. Maxime nam rerum pariatur ex voluptates rerum deleniti.</p>
+    <p>Pariatur eveniet quo aut et qui. Autem occaecati quia suscipit quos odit animi et ipsum. Corrupti ipsum sint doloremque. Corrupti ut suscipit et.</p>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    <p>Pariatur eveniet quo aut et qui. Autem occaecati quia suscipit quos odit animi et ipsum. Corrupti ipsum sint doloremque. Corrupti ut suscipit et.</p>
+    <ol>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ol>
+    <p>Pariatur eveniet quo aut et qui. Autem occaecati quia suscipit quos odit animi et ipsum. Corrupti ipsum sint doloremque. Corrupti ut suscipit et.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tomatoes</td>
+          <td>$1</td>
+          <td>10</td>
+          <td>$10</td>
+        </tr>
+        <tr>
+          <td>Potatoes</td>
+          <td>$1</td>
+          <td>10</td>
+          <td>$10</td>
+        </tr>
+        <tr>
+          <td>Oranges</td>
+          <td>$1</td>
+          <td>10</td>
+          <td>$10</td>
+        </tr>
+        <tr>
+          <td>Apples</td>
+          <td>$1</td>
+          <td>10</td>
+          <td>$10</td>
+        </tr>
+        <tr>
+          <td colspan="3">Total</td>
+          <td>$40</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Odio nemo rerum dolor qui neque. Ex aut nostrum debitis ipsa quaerat eos sed. Minus vel dolorum molestias animi consequatur.</p>
+    <p>Quod sequi vel et ut quia voluptatem omnis. In et beatae itaque. Quo aliquid qui amet quae libero laudantium assumenda nulla. Accusamus aliquam impedit beatae ad blanditiis vel quibusdam. Voluptatem ut aut dolores eligendi temporibus ratione.</p>
+    <p>Voluptatem voluptatem iure doloremque eaque autem id dolor fuga. Quia provident quisquam dolores quo et. Magni illum autem quaerat neque officia.</p>
+  </article>
+</main>
