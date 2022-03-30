@@ -142,4 +142,113 @@ article {
     <p>Quod sequi vel et ut quia voluptatem omnis. In et beatae itaque. Quo aliquid qui amet quae libero laudantium assumenda nulla. Accusamus aliquam impedit beatae ad blanditiis vel quibusdam. Voluptatem ut aut dolores eligendi temporibus ratione.</p>
     <p>Voluptatem voluptatem iure doloremque eaque autem id dolor fuga. Quia provident quisquam dolores quo et. Magni illum autem quaerat neque officia.</p>
   </article>
+  <hr>
+  <form>
+          <h1>Forms demo</h1>
+          <p>Please log in to your account.</p>
+        <table>
+        <tr><div class="form-field">
+          <td><label for="username">Email address</label></td>
+          <td><input id="username" placeholder="jdoe@example.org" /></td>
+        </div></tr>
+
+        <tr><div class="form-field">
+          <td><label for="password">Password</label>
+          <td><input id="password" type="password" />
+          <td><span class="help">
+            The word "password" dates back as far as the late 1700's.
+          </span>
+        </div></tr>
+
+        <tr><div class="form-field">
+          <td><label for="disabled">Disabled field</label>
+          <td><input id="disabled" value="This field is disabled" disabled />
+        </div>
+          <tr><td><div class="form-checkbox">
+            <input id="remember" type="checkbox" />
+            <label for="remember" class="checkbox">Remember me</label>
+          </div>
+          <td><div class="form-field">
+            <button class="btn-primary block">Log in</button>
+          </div> 
+        </table>
+        
+          <h2>More forms</h2>
+          <form>
+            <div class="form-field">
+              <label for="textarea">Text Area</label>
+              <textarea id="textarea" rows="5"></textarea>
+            </div>
+            <div class="form-field">
+              <label for="select">Select</label>
+              <select id="select">
+                <option>Vimes</option>
+                <option>Colon</option>
+                <option>Nobby</option>
+                <option>Carrot</option>
+                <option>Angua</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="multiselect">Multiselect</label>
+              <select id="multiselect" multiple>
+                <option>Vimes</option>
+                <option>Colon</option>
+                <option>Nobby</option>
+                <option>Carrot</option>
+                <option>Angua</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="file">File</label>
+              <input id="file" type="file" />
+            </div>
+            <fieldset>
+              <legend>Check boxes</legend>
+              <div class="form-checkbox">
+                <label for="check1">Item 1</label>
+                <input id="check1" type="checkbox" />
+              </div>
+              <div class="form-checkbox">
+                <label for="check2">Item 2</label>
+                <input id="check2" type="checkbox" />
+              </div>
+              <div class="form-checkbox">
+                <label for="check3">Item 3</label>
+                <input id="check3" type="checkbox" disabled />
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Check boxes (inline)</legend>
+              <div class="form-checkbox inline">
+                <input id="check4" type="checkbox" />
+                <label for="check4">Item 1</label>
+              </div>
+              <div class="form-checkbox inline">
+                <input id="check5" type="checkbox" />
+                <label for="check5">Item 2</label>
+              </div>
+              <div class="form-checkbox inline">
+                <input id="check6" type="checkbox" disabled />
+                <label for="check6">Item 3</label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Radio buttons</legend>
+              <div class="form-checkbox">
+                <label for="radio1">Item 1</label>
+                <input id="radio1" name="radio" type="radio" />
+              </div>
+              <div class="form-checkbox">
+                <label for="radio2">Item 2</label>
+                <input id="radio2" name="radio" type="radio" />
+              </div>
+              <div class="form-checkbox">
+                <label for="radio1">Item 3</label>
+                <input id="radio1" name="radio" type="radio" disabled />
+              </div>
+            </fieldset>
+          </form>
+  </form>
+  <br>
 </main>
