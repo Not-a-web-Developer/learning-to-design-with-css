@@ -20,6 +20,14 @@
         </button>
     </div>
     <h1 id="hilol" x-show="open" x-transition>Hello, Amy</h1>
-
+<hr>
+<h1> Testing, testing </h1>
+<p> Everything seems to be in order here </p><br><br><br>
+<div x-data="{count: 0}">
+<p>click the following button <kbd>10</kbd> times: </p>
+<button x-on:click="count++">button lol</button>
+<p>count: <span x-text="count"></span></p>
+<div x-show="count == 10">yay you clicked it 10 times</div>
+</div>
 </body>
 </html>

@@ -1,3 +1,20 @@
+* {
+  color: #444;
+  --box-shadow: 
+    0.5px 1px 1px hsl(0deg 0% 40% / 0.075),
+    1px 2px 2px hsl(0deg 0% 40% / 0.075),
+    2px 4px 4px hsl(0deg 0% 40% / 0.075),
+    4px 8px 8px hsl(0deg 0% 40% / 0.075),
+    8px 16px 16px hsl(0deg 0% 40% / 0.075)
+    ;
+--box-shadow-smol: 
+    0.5px 1px 1px hsl(0deg 0% 40% / 0.075),
+    1px 2px 2px hsl(0deg 0% 40% / 0.075),
+    2px 4px 4px hsl(0deg 0% 40% / 0.075)
+    ;
+}
+
+
 body {
     width: 60%;
     background-color: #eee;
@@ -40,4 +57,14 @@ a, a:visited {
     color: inherit;
 }
 
-
+hr {
+  max-width: 70%;
+  border: #ccc solid 1px;
+  margin: 4rem auto;
+}
+kbd {
+  border-radius: 2px;
+  padding: 0.1rem 0.5rem;
+  background: #ccc;
+  box-shadow: var(--box-shadow-smol);
+}
